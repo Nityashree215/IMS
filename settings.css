@@ -1,0 +1,77 @@
+/* Set the background image and properties */
+body {
+    background-image: url('images/sett.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif; /* Set a default font */
+    color: #333; /* Set a default text color */
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px; /* Set width for sidebar */
+    background-color: #2c3e50; /* Sidebar background color */
+    color: white; /* Sidebar text color */
+    padding: 20px; /* Padding for sidebar */
+    position: fixed; /* Fixed sidebar */
+    height: 100%; /* Full height */
+    overflow-y: auto; /* Enable scrolling */
+}
+
+.sidebar h2 {
+    text-align: center; /* Center align title */
+    margin-bottom: 20px; /* Space below title */
+    font-size: 24px; /* Increased font size for visibility */
+}
+
+.sidebar ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.sidebar ul li {
+    margin: 10px 0; /* Space between links */
+}
+
+.sidebar ul li a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make the entire area clickable */
+    padding: 10px; /* Padding for links */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.sidebar ul li a:hover {
+    background-color: #34495e; /* Hover color */
+}
+
+/* Main content styling */
+.main-content {
+    margin-left: 270px; /* Add margin to avoid overlap with sidebar */
+    padding: 20px; /* Padding for content */
+}
+
+/* Form styling */
+form {
+    background-color: #ffffff; /* Solid white background */
+    padding: 20px; /* Padding for forms */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    margin: 20px 0; /* Space above and below form */
+}
+
+/* Label styling */
+label {
+    display: block; /* Block display for labels */
+    margin: 10px 0 5px; /* Space above and below labels */
+    font-weight: bold; /* Bold text for labels */
+}
+
+/* Input and select styling */
+input, select {
+    width: calc(100% - 22px); /* Full width minus padding */
+    padding: 10px; /* Padding for inputs */
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners for inputs */
+    box-sizing: border-bo

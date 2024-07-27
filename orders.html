@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders - Inventory Management System</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="home-styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="register-background.css">
+    <link rel="stylesheet" href="orders.css"> <!-- Link to the orders page CSS -->
+</head>
+<body>
+    <div class="sidebar">
+        <h2>IMS</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Suppliers</a></li>
+            <li><a href="orders.html">Orders</a></li> <!-- Link to the orders page -->
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="logout.php">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Orders</h1>
+        </header>
+        <section>
+            <h2>Manage Orders</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample row, replace with dynamic content as needed -->
+                    <tr>
+                        <td>1</td>
+                        <td>Smartphones</td>
+                        <td>10</td>
+                        <td>Pending</td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Skincare products</td>
+                        <td>5</td>
+                        <td>Shipped</td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

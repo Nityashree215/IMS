@@ -1,0 +1,32 @@
+/* suppliers.css */
+
+body {
+    background-image: url('images/supply-background.jpeg'); /* Change the path to your background image */
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for sidebar */
+    color: white;
+}
+
+.main-content {
+     /* Semi-transparent background for main content */
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    
+    text-align: left;
+}

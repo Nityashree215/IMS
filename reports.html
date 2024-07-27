@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Inventory Management System</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="home-styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="register-background.css">
+    <link rel="stylesheet" href="orders.css">
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="suppliers.css">
+    <link rel="stylesheet" href="reports.css"> <!-- Link to the reports page CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for graphs -->
+</head>
+<body>
+    <div class="sidebar">
+        <h2>IMS</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li> <!-- Link to Dashboard -->
+            <li><a href="products.html">Products</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="suppliers.html">Suppliers</a></li>
+            <li><a href="reports.html">Reports</a></li> <!-- Link to the reports page -->
+            <li><a href="logout.php">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Reports</h1>
+        </header>
+        <section>
+            <h2>Sales Overview</h2>
+            <canvas id="salesChart"></canvas> <!-- Canvas for Sales Chart -->
+        </section>
+        <section>
+            <h2>Inventory Status</h2>
+            <canvas id="inventoryChart"></canvas> <!-- Canvas for Inventory Chart -->
+        </section>
+        <section>
+            <h2>Suppliers Performance</h2>
+            <canvas id="suppliersChart"></canvas> <!-- Canvas for Suppliers Chart -->
+        </section>
+    </div>
+
+    <script>
+        // Sales Chart
+        const ctxSales = document.getElementById('salesChart').getContext('2d');
+        const salesChart = new Chart(ctxSales, {
+            type: 'pie',
+            data: {
+                labels: ['Product A', 'Product B', 'Product C'],
+                datasets: [{
+                    label: 'Sales Distribution',
+                    data: [300, 50, 100],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+                    borderColor: ['#fff', '#fff', '#fff'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Sales Overview'
+                    }
+                }
+            }
+        });
+
+        // Inventory Chart
+        const ctxInventory = document.getElementById('inventoryChart').getContext('2d');
+        const inventoryChart = new Chart(ctxInventory, {
+            type: 'bar',
+            data: {
+                labels: ['Smartphones', 'Skin care products', 'tablets'],
+                datasets: [{
+                    label: 'Inventory Level',
+                    data: [10, 20, 15],
+                    backgroundColor: '#36A2EB',
+                    borderColor: '#fff',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    title: {
+                        display: true,
+                        text: 'Inventory Status'
+                    }
+                }
+            }
+        });
+
+        // Suppliers Chart
+        const ctxSuppliers = document.getElementById('suppliersChart').getContext('2d');
+        const suppliersChart = new Chart(ctxSuppliers, {
+            type: 'line',
+            data: {
+                labels: ['Nityashree', 'Aryaraj', 'Asha'],
+                datasets: [{
+                    label: 'Supplier Ratings',
+                    data: [4.5, 3.8, 4.0],
+                    borderColor: '#FF6384',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    title: {
+                        display: true,
+                        text: 'Suppliers Performance'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
